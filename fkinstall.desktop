@@ -2,7 +2,7 @@
 Name=FKInstall
 Comment=Package Manager for PacMan
 Exec=fkinstall
-Icon=fkinstall
+Icon=fkinstall.svg
 Terminal=false
 Type=Application
 Categories=Utility;System;
