@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=FKInstall
+Comment=Package Manager for FKInstall
+Exec=fkinstall
+Icon=fkinstall
+Terminal=false
+Type=Application
+Categories=Utility;System;
