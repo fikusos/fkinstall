@@ -268,7 +268,7 @@ class FKInstall(QMainWindow):
     def init_categories(self):
         categories = {
             "Internet": [
-                "firefox", "chromium", "thunderbird", "brave", "opera", "vivaldi", "tor-browser", "falkon",
+                "firefox", "chromium", "thunderbird", "opera", "vivaldi", "tor-browser", "falkon",
                 "qutebrowser", "epiphany", "midori", "lynx", "links", "w3m", "surf", "dillo", "netsurf",
                 "palemoon", "waterfox", "basilisk", "otter-browser", "slimjet", "iridium", "ungoogled-chromium",
                 "seamonkey", "konqueror", "luakit", "arora", "qupzilla", "dooble", "uzbl", "min", "nyxt",
@@ -416,7 +416,7 @@ class FKInstall(QMainWindow):
 
     def remove_selected_package(self, package_name):
         try:
-            subprocess.run(["sudo", "pacman", "-R", "--noconfirm", package_name], check=True)
+            subprocess.run(["sudo", "pacman", "-Rcc", "--noconfirm", package_name], check=True)
             QMessageBox.information(self, "Success", f"Package {package_name} removed successfully!")
             self.log_message(f"Package removed: {package_name}")
         except subprocess.CalledProcessError as e:
